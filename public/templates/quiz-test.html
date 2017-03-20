@@ -1,0 +1,22 @@
+<div class="quiz-app">
+	<div ng-controller="timerController">
+		<timer></timer>
+	</div>
+	<div class="container" >
+		<div class="row question">{{questionNumber}}. {{questionModel.question}}</div>
+		<ul class="row">
+			<li class="option" ng-repeat="option in questionModel.options">
+				<div class="radio">
+					<label>
+						<input type="radio" name="option" value="{{$index}}" ng-model="userTest.attemptedQuestions[questionModel.id]"/>
+						{{option}}
+					</label>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="pull-right">
+		<button class="btn btn-default quiz-theme-btn" ng-click="nextQuestion()" ng-show="!isLast"> Next ></button>
+		<button class="btn btn-success quiz-theme-btn" ng-click="submit()" ng-show="isLast"> Submit </button>
+	</div>
+</div>

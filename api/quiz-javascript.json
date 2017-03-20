@@ -1,0 +1,224 @@
+{
+	"questions" : [
+		{
+			"id" : 1,
+			"question" : "Which of the following is correct about callbacks?",
+			"options" : [
+				"A callback is a plain JavaScript function passed to some method as an argument or option.",
+				"Some callbacks are just events, called to give the user a chance to react when a certain state is triggered.",
+				"Both of the above.",
+				"None of the above."
+			],
+			"answer" : 2
+		},
+		{
+			"id" : 2,
+			"question" : "Which of the following is the correct syntax to create a cookie using JavaScript?",
+			"options" : [
+				"document.cookie = 'key1 = value1; key2 = value2; expires = date';",
+				"browser.cookie = 'key1 = value1; key2 = value2; expires = date';",
+				"window.cookie = 'key1 = value1; key2 = value2; expires = date';",
+				"navigator.cookie = 'key1 = value1; key2 = value2; expires = date';"
+			],
+			"answer" : 0
+		},
+		{
+			"id" : 3,
+			"question" : "Which built-in method combines the text of two strings and returns a new string?",
+			"options" : [
+				"append()",
+				"concat()",
+				"attach()",
+				"None of the above."
+			],
+			"answer" : 1
+		},
+		{
+			"id" : 4,
+			"question" : "Which of the following function of Number object forces a number to display in exponential notation?",
+			"options" : [
+				"toExponential()",
+				"toFixed()",
+				"toPrecision()",
+				"toLocaleString()"
+			],
+			"answer" : 0
+		},
+		{
+			"id" : 5,
+			"question" : "Which of the following function of String object combines the text of two strings and returns a new string?",
+			"options" : [
+				"add()",
+				"merge()",
+				"concat()",
+				"append()"
+			],
+			"answer" : 2
+		},
+		{
+			"id" : 6,
+			"question" : "Which of the following function of String object extracts a section of a string and returns a new string?",
+			"options" : [
+				"slice()",
+				"split()",
+				"replace()",
+				"search()"
+			],
+			"answer" : 0
+		},
+		{
+			"id" : 7,
+			"question" : "Which of the following function of String object creates a string to blink as if it were in a <blink> tag?",
+			"options" : [
+				"anchor()",
+				"big()",
+				"blink()",
+				"italics()"
+			],
+			"answer" : 2
+		},
+		{
+			"id" : 8,
+			"question" : "Which of the following function of String object causes a string to be displayed as struck-out text, as if it were in a <strike> tag?",
+			"options" : [
+				"sup()",
+				"small()",
+				"strike()",
+				"sub()"
+			],
+			"answer" : 2
+		},
+		{
+			"id" : 9,
+			"question" : "Which of the following function of Array object returns the first (least) index of an element within the array equal to the specified value, or -1 if none is found?",
+			"options" : [
+				"indexOf()",
+				"join()",
+				"lastIndexOf()",
+				"map()"
+			],
+			"answer" : 0
+		},
+		{
+			"id" : 10,
+			"question" : "Which of the following function of Array object returns a string representing the array and its elements?",
+			"options" : [
+				"slice()",
+				"sort()",
+				"splice()",
+				"toString()"
+			],
+			"answer" : 3
+		},
+		{
+			"id" : 11,
+			"question" : "Which built-in method calls a function for each element in the array?",
+			"options" : [
+				"while()",
+				"loop()",
+				"forEach()",
+				"None of the above."
+			],
+			"answer" : 2
+		},
+		{
+			"id" : 12,
+			"question" : "Which built-in method reverses the order of the elements of an array?",
+			"options" : [
+				"changeOrder(order)",
+				"reverse()",
+				"sort(order)",
+				"None of the above."
+			],
+			"answer" : 1
+		},
+		{
+			"id" : 13,
+			"question" : "Which of the following function of Boolean object returns a string of either 'true' or 'false' depending upon the value of the object?",
+			"options" : [
+				"toSource()",
+				"valueOf()",
+				"toString()",
+				"None of the above."
+			],
+			"answer" : 2
+		},
+		{
+			"id" : 14,
+			"question" : "Which of the following function of String object returns the characters in a string beginning at the specified location through the specified number of characters?",
+			"options" : [
+				"slice()",
+				"split()",
+				"substr()",
+				"search()"
+			],
+			"answer" : 2
+		},
+		{
+			"id" : 15,
+			"question" : "Which of the following function of String object returns the calling string value converted to lower case?",
+			"options" : [
+				"toLocaleLowerCase()",
+				"toLowerCase()",
+				"toString()",
+				"substring()"
+			],
+			"answer" : 1
+		},
+		{
+			"id" : 16,
+			"question" : "Which of the following function of Array object returns a new array comprised of this array joined with other array(s) and/or value(s)?",
+			"options" : [
+				"concat()",
+				"pop()",
+				"push()",
+				"some()"
+			],
+			"answer" : 0
+		},
+		{
+			"id" : 17,
+			"question" : "Which of the following function of Array object calls a function for each element in the array?",
+			"options" : [
+				"concat()",
+				"every()",
+				"filter()",
+				"forEach()"
+			],
+			"answer" : 3
+		},
+		{
+			"id" : 18,
+			"question" : "Which of the following function of Array object removes the first element from an array and returns that element?",
+			"options" : [
+				"reverse()",
+				"some()",
+				"shift()",
+				"slice()"
+			],
+			"answer" : 2
+		},
+		{
+			"id" : 19,
+			"question" : "Which of the following type of variable is visible everywhere in your JavaScript code?",
+			"options" : [
+				"global variable",
+				"local variable",
+				"Both of the above.",
+				"None of the above."
+			],
+			"answer" : 0
+		},
+		{
+			"id" : 20,
+			"question" : "Which built-in method returns the character at the specified index?",
+			"options" : [
+				"characterAt()",
+				"getCharAt()",
+				"charAt()",
+				"None of the above."
+			],
+			"answer" : 2
+		}
+	]
+}

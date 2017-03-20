@@ -1,0 +1,23 @@
+<div class="certificate">
+	<div class="top-section">
+		<div class="top-content">
+			<div class="certificate-name">Certificate of Achievement</div>
+		</div>
+	</div>
+	<div class="bottom-section">
+		<div class="bottom-content">
+			<div class="certificate-statement">This is to certify that</div>
+			<div class="participant-name">{{user.firstName}} {{user.lastName}}</div>
+			<div class="certificate-statement">has taken the <i>{{quizName}} Test</i> and secured <br/> {{userTest.score}}/10</div>
+			<div class="certificate-footer">
+				<div class="certifier">
+				Kartik R Patel <br/>
+				Javascript Enginner</div>
+				<div class="stamp"><img src="images/stamp.png"/></div>
+				<div class="certificate-data">
+				{{date | date:'yyyy-MM-dd'}} <br/>
+				Date</div>
+			</div>
+		</div>
+	</div>
+</div>

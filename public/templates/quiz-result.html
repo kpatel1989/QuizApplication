@@ -1,0 +1,70 @@
+<div>
+	<div class="score-container">
+		<p> You have scored {{userTest.score}} points. </p>
+		<p> You have answered <label id="scoreCount" data-toggle="modal" data-target="#answersModal"> {{userTest.score}} out of {{quizModel.questions.length}} </label> questions correctly!</p>
+	</div>
+	<!-- <div class="result-actions-container btn-group">
+		<button name="answers" class="btn btn-primary" data-toggle="modal" data-target="#answersModal"><span class="glyphicon glyphicon-list"> </span> Answers</button>
+		 <button name="print" class="btn btn-primary" id="printCertificat"><span class="glyphicon glyphicon-print"> </span> Print a free certificate!</button>
+	</div> -->
+	<div class="sign-in-subscribe-container">
+		<div class="sign-in-link-container" ng-show="!user">
+			<div class="sign-in-request">
+				 <h5>Get access to all our quizzes and connect to experienced frontend developer all accross the world.</h5>
+				<button class="btn btn-primary" data-toggle="modal" data-target="#signInModal">Sign in / Register </button>
+			</div>
+		</div>
+		<p ng-show="user">
+			<!-- <input type="button" class="btn btn-success" name="saveToProfile" value="Add this score to your profile badge."/> -->
+			<input type="button" class="btn btn-success quiz-theme-btn" name="backToDashboard" ng-click="goBackToDashboard()" value="Go back to dashboard."/>
+		</p>
+		<div class="subscribe-blog" ng-show="!user">
+			<h5>Subscribe to this blog to get latest news and new quizes directly to your mail box. </h5>
+			<form name="subscribeForm"> 
+				<div class="subscribe-email-id">
+					<div class="input-group">
+						<input class=" form-control" type="email" name="subscribeEmailId" id="subscribeEmailId"  ng-model="subscribeEmailId" required=true placeholder="Enter your email address" />
+						<div class="input-group-btn" name="subscribe" value="Subscribe" id="basic-addon2">
+							<input type="submit" class="btn btn-success" name="subscribe" value="Subscribe" ng-click="subscribe()"/>
+						</div>
+					</div>
+					<div class="error" role="alert" ng-show="invalidEmailAddress">
+					  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+					  Please enter a valid email Id
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	
+	<!-- <div class="btn-group hidden-print"> -->
+		<!-- <button name="print" class="btn btn-default" onclick="print()"><span class="glyphicon glyphicon-print"> </span> Print a certificate</button> -->
+	<!-- </div> -->
+	<!-- <quizcertificate></quizcertificate> -->
+	<div class="modal fade" id="answersModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Answers</h4>
+	      </div>
+	      <div class="modal-body">
+	        	<div class="quiz-result">
+					<div id="scoreContainer"> Your score is <label id="score">{{score}}</label></div>
+					<ul id="questionsList">
+						<li class="question" ng-repeat="que in quizModel.questions">
+							<label class="text-info">{{que.question}}</label>
+							<label class="pull-right label label-success" ng-if="isCorrect(que)"><span class="glyphicon glyphicon-ok"></span></label>
+							<label class="pull-right label label-danger" ng-if="!isCorrect(que)"><span class="glyphicon glyphicon-remove"></span></label>
+							<div class="text-success">Answer : {{que.options[que.answer]}}</div>
+						</li>
+					</ul>
+				</div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+</div>

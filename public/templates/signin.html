@@ -1,0 +1,79 @@
+<div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="signInTitle">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="signInTitle">Sign in</h4>
+      </div>
+      <div class="modal-body">
+        <form class='form-horizontal' name="signInForm">
+            <div class="form-group" ng-show="isRegister">
+              <label class="col-md-3 control-label" for="firstName">First Name</label>
+              <div class="col-md-7">
+                <input class=" form-control" type="text" ng-blur="validateFirstName()" value="" id="firstName" name="first-name" ng-model="user.firstName" required placeholder="Enter your first name"/>
+                <div class="error" role="alert" ng-show="invalidFirstName">
+                  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                  Enter a valid first name
+                </div>
+              </div>
+          </div>
+          <div class="form-group" ng-show="isRegister">
+            <label class="col-md-3 control-label" for="lastName">Last Name</label>
+            <div class="col-md-7">
+              <input class=" form-control" type="text" ng-blur="validateLastName()" value="" id="lastName" ng-model="user.lastName" placeholder="Enter your last name" />
+              <div class="error" role="alert" ng-show="invalidLastName">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                Enter a valid last name
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label" for="emailAddress">Email Address</label>
+            <div class="col-md-7">
+              <input class=" form-control" type="email" ng-blur="validateEmailAddress()" name="emailAddress" id="emailAddress" ng-model="user.emailAddress" required=true placeholder="Enter your email address" />   
+              <div class="error" role="alert" ng-show="invalidEmailAddress">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                Enter a valid email address
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label" for="password">Password</label>
+            <div class="col-md-7">
+              <input class="form-control" type="password" ng-blur="validatePassword()" id="password" name="password" ng-model="user.password" required placeholder="Enter a password"/>
+              <div class="error" role="alert" ng-show="invalidPassword">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                Password is required
+              </div>
+            </div>
+          </div>
+          <div class="form-group" ng-show="isRegister">
+            <label class="col-md-3 control-label" for="confirmPassword">Confirm Password</label>
+            <div class="col-md-7">
+              <input class=" form-control" type="password" ng-blur="validateConfirmPassword()" id="confirmPassword" name="confirmPassword" ng-model="user.confirmPassword" required placeholder="Re-Enter the password"/>
+              <div class="error" role="alert" ng-show="invalidConfirmPassword">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                Confirm Password should be same as the password
+              </div>
+            </div>
+          </div>
+          <div class="error text-center" role="alert" ng-show="signInError">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <label ng-model="signInError" id="signInError">{{signInError}}</label>
+          </div>
+          <div class="form-group">
+            <div class="col-md-offset-3 col-md-7 text-center">
+              <input type="button" class="btn btn-success" name="signIn" value="SignIn" ng-click="signIn()" ng-show="!isRegister"/>
+              <a href="#" ng-show="!isRegister" ng-click="isRegister = true">Register</a>
+              <input type="button" class="btn btn-success" name="register" value="Register" ng-click="register()" ng-show="isRegister"/>
+              <a href="#" ng-show="isRegister" ng-click="isRegister = false">SignIn</a>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

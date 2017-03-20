@@ -1,0 +1,25 @@
+<div>
+	<h1 class="text-center banner"> Online Quiz on <br/> Frontend Technologies.</h1>
+	<div class="row text-center">
+		<div class="btn-container">
+			<div class="quiz-card" ng-repeat="test in testList">
+				<img src="images/{{test.testDisplayImage}}"/>
+				<button class="btn btn-success" id="takeAQuiz" ng-click="loadTest(test)">
+					Take a {{test.testName}} quiz
+				</button>
+			</div>
+<!-- 			<div class="quiz-card">
+				<img src="images/jquery.png"/>
+				<button class="btn btn-success" id="takeAJqueryQuiz" ng-click="go('/test/jquery/instruction')">
+					Take a Jquery quiz
+				</button>
+			</div> -->
+		</div>
+		<div class="text-info" id="about"> <h4>About the quiz</h4>
+			<p class="text-info">
+				Quiz mainly focuses on knowledge of scoping, function expressions (and how they differ from function declarations), references, process of variable and function declaration, order of evaluation, and a couple more things like delete operator and object instantiation. These are all relatively simple concepts, which I think every professional Javascript developer should know. Most of these are applied in practice quite often. Ideally, even if you can't answer a question, you should be able to infer answer from specs (without executing the snippet). When creating these questions, I made sure I can answer each one of them off the top of my head, to keep things relatively simple
+			</p>
+		</div>
+		
+	</div>
+</div>

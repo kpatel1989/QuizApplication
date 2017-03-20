@@ -1,0 +1,26 @@
+<h1>Skill Tests</h1>
+<div class="test-taken table-responsive">
+	<table class="table table-striped">
+		<thead>
+	        <tr>
+	            <th colspan="2">Test</th>
+	            <th>Score</th>
+	            <th class="txtCenter">Max Score</th>
+	        </tr>
+        </thead>
+        <tbody>
+        	<tr ng-repeat="test in testsTaken">
+	            <td colspan="2">
+	            	<div>{{test.testName}}</div>
+					<div>Taken on {{test.testTaken | myDateFormat }}</div>
+				</td>
+	            <td class="txtCenter">
+	            	{{test.score}}
+	            </td>
+	            <td>
+	            	{{test.maxScore}}
+	            </td>
+	        </tr>
+        </tbody>
+	</table>
+</div>
